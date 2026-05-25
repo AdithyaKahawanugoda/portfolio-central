@@ -70,7 +70,7 @@ function Contact() {
                   {[
                     { icon: 'Github', label: 'github', href: 'https://github.com/AdithyaKahawanugoda', target: '_blank' },
                     { icon: 'Linkedin', label: 'linkedin', href: 'https://www.linkedin.com/in/adithya-kahawanugoda-839116185', target: '_blank' },
-                    { icon: 'ExternalLink', label: 'resume.pdf', href: 'https://raw.githubusercontent.com/AdithyaKahawanugoda/REPO_NAME/main/AdithyaCV.pdf', target: '_blank' },
+                    { icon: 'ExternalLink', label: 'resume.pdf', href: 'https://raw.githubusercontent.com/AdithyaKahawanugoda/portfolio-central/main/AdithyaCV.pdf', target: '_blank' },
                   ].map((s) => {
                     const I = Icons[s.icon];
                     return (
