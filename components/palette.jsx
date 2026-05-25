@@ -7,7 +7,7 @@ const PALETTE_ITEMS = [
   { id: 'architecture', label: 'Infrastructure', sub: 'interactive diagram', section: 'go to', icon: 'Cloud' },
   { id: 'skills', label: 'Stack', sub: 'technologies', section: 'go to', icon: 'Cpu' },
   { id: 'contact', label: 'Contact', sub: 'email, github, linkedin', section: 'go to', icon: 'Mail' },
-  { id: 'mail', label: 'Send email', sub: 'adithya.kahawanugoda@gmail.com', section: 'actions', icon: 'Mail', external: 'mailto:adithya.kahawanugoda@gmail.com' },
+  { id: 'mail', label: 'Send email', sub: 'adithyakahawanugoda@gmail.com', section: 'actions', icon: 'Mail', external: 'mailto:adithyakahawanugoda@gmail.com' },
   { id: 'github', label: 'Open GitHub', sub: 'see all repos', section: 'actions', icon: 'Github', external: 'https://github.com/AdithyaKahawanugoda' },
   { id: 'linkedin', label: 'Open LinkedIn', sub: 'connect with me', section: 'actions', icon: 'Linkedin', external: 'https://www.linkedin.com/in/adithya-kahawanugoda-839116185' },
 ];

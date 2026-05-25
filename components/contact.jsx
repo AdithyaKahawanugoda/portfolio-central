@@ -1,6 +1,6 @@
 function Contact() {
   const [copied, setCopied] = useState(false);
-  const email = 'adithya.kahawanugoda@gmail.com';
+  const email = 'adithyakahawanugoda@gmail.com';
   const copy = () => {
     navigator.clipboard?.writeText(email).then(() => {
       setCopied(true);
