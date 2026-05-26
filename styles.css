@@ -167,38 +167,41 @@ body {
 }
 
 /* ---- Pipeline ---- */
-.pipe-track {
-  position: relative;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
-  border-radius: 2px;
+/* rail is rendered inline in components/pipeline.jsx with a repeating-linear-gradient mask
+   that punches transparent gaps over each tile center */
+
+/* Slower, gentler pulse for the active stage tile */
+.tile-ping {
+  animation: tilePing 2s cubic-bezier(0.2, 0, 0.2, 1) infinite;
 }
-.pipe-pulse {
-  position: absolute;
-  top: -3px;
-  left: -16px;
-  width: 32px;
-  height: 8px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, transparent, var(--iris-400), transparent);
-  filter: blur(0.4px);
-  animation: pipeFlow 4.8s linear infinite;
-}
-@keyframes pipeFlow {
+@keyframes tilePing {
   0% {
-    transform: translateX(0);
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  80%, 100% {
+    transform: scale(1.55);
     opacity: 0;
   }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(110vw);
-    opacity: 0;
-  }
+}
+
+/* Check badge entry on tile completion */
+.check-pop {
+  animation: checkPop 380ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+@keyframes checkPop {
+  0%   { transform: scale(0.4); opacity: 0; }
+  60%  { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Currently-running label cross-fade */
+.label-in {
+  animation: labelIn 380ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+}
+@keyframes labelIn {
+  0%   { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* node pulse */
